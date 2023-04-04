@@ -1,0 +1,32 @@
+{% extends 'html/base.html' %}
+
+{% block contenido %}
+
+    <div class="container">
+        <!--Creamos una tarjeta con imagen-->
+        <div class="row" style="background:#383e77;">
+            <div class="col-md-3">
+                <div class="card mx-auto"> <!--tamaño de la tarjeta-->
+                    <img class="card-img-top" src="/static/imagen/educacion/patrulleritos.jpeg" alt="Card image cap" style="width: 100%;">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <h4 class="card-title mb-2">Patrulleritos</h4>
+                        </div>
+                        <p class="card-text">Campaña de seguridad vial con los patrulleritos.</p>
+                        <a href="{% url 'home'%}" class="stretched-link"></a> <!--stretched-link colocamos la ficha como enlace-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="background:#383e77;">
+            <p>hola</p>
+        </div>
+        
+
+
+
+
+
+    </div>
+{% endblock contenido %}
+

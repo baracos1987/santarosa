@@ -6,4 +6,7 @@ def home(request):
 
 def dashboard(request):
     return render(request, 'html/dashboard.html')
+
+def educacion(request):
+    return render(request, 'html/educacion.html')
   
