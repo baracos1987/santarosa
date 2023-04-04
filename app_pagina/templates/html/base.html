@@ -1,17 +1,76 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SantaRosa</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+
+        <!--Agregamos los cdn de bootstrap5-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
     </head>
     <body>
-       <h2>fdfd</h2>
-     
-        <script src="" async defer></script>
+        <body style="background: #afcff8;">
+   
+            <div class="container mt-1">
+                <!--Logo o imagen de santa rosa de osos-->
+                <div class="row">
+                    <div class="col-md-12" style="background:#383e77;">
+                        <h6></h6>
+                      <img class="img-thumbnail" src="/static/imagen/santalogo.jpg" width="1300" height="150">
+                    </div>
+                </div>
+        
+                <!--Botones de navegacion-->
+                <div class="row">
+                    <div class="col-md-4 text-white text-center" style="background: #383e77;">
+                        <div class="d-grid gap-2 d-md-flex mt-2">
+                            <a class="btn btn-primary" href="" role="button">Home</a> 
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-md-8 text-white text-center" style="background: #383e77;">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-2">
+                            <a class="btn btn-primary" href="" role="button">Contacto</a>
+                            <a class="btn btn-primary" href="" role="button">Educacion Vial</a>
+                        </div>
+                        
+                    </div>
+                                
+                </div>
+                
+                
+                <!--Creamos una fila para ingresar el codigo de power BI-->
+                <div class="row">
+                   <div class="col-md-12 text-white text-center" style="background: #383e77;">
+                        <br>
+                   </div>
+                
+                   <div>
+                        <div class="row">
+                            <div class="col-md-12" style="background: #383e77">                          
+                                <div class="row">
+                                     
+                                 </div>
+                             </div>                                  
+                        </div>
+                    </div>
+                 </div>   
+            </div> 
+            {% block contenido%}
+
+            {% endblock contenido %}
+
     </body>
+    
 </html>
