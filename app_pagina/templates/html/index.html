@@ -1,5 +1,41 @@
 {% extends 'html/base.html' %} <!--llamamo base.html -->
 
 {% block contenido%}
+<div class="container">
 
+    <div class="row" style="background:#383e77;">
+
+        <!--creamos ficha 1-->
+        <div class="col-md-6 mb-3">
+            <div class="card mx-auto"> <!--tamaño de la tarjeta-->
+                <div class="card-header bg-secondary text-center mr-2">
+                    <strong class="card-title text-light">Indicadores de Tránsito</strong>
+                </div> 
+                <img class="card-img-top" src="/static/imagen/dashboard.jpg" alt="Card image cap" style="width: 100%;">
+                <div class="card-body">                       
+                    <p class="card-text">Tablero de control para el monitore de la accidentalidad y comparendos.</p>
+                    <a href="{% url 'dashboard'%}" class="stretched-link"></a> <!--stretched-link colocamos la ficha como enlace-->
+                <hr> <!--hr para linear una ficha-->
+                <p class="h6 text-primary text-center" >Ingresar</p>
+                </div>
+            </div>
+        </div>
+
+        <!--creamos ficha 2-->
+        <div class="col-md-6 mb-3">
+            <div class="card mx-auto"> <!--tamaño de la tarjeta-->
+                <div class="card-header bg-secondary text-center mr-2">
+                    <strong class="card-title text-light">Educación Vial</strong>
+                </div> 
+                <img class="card-img-top" src="/static/imagen/educacion/patrulleritos.jpeg" alt="Card image cap" style="width: 100%;">
+                <div class="card-body">                       
+                    <p class="card-text">Todo sobre el tema de educación vial.</p>
+                    <a href="{% url 'educacion'%}" class="stretched-link"></a> <!--stretched-link colocamos la ficha como enlace-->
+                <hr> <!--hr para linear una ficha-->
+                <p class="h6 text-primary text-center" >Ingresar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock contenido %}

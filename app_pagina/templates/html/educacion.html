@@ -3,7 +3,8 @@
 {% block contenido %}
 
     <div class="container">
-        <!--Creamos una tarjeta con imagen-->
+
+        <!--Creamos una tarjeta con imagen, tarjeta 1-->
         <div class="row" style="background:#383e77;">
 
             <div class="col-md-3 mb-3">
@@ -20,7 +21,8 @@
                     </div>
                 </div>
             </div>
-            
+
+            <!--Creamos una tarjeta con imagen, tarjeta 2-->
             <div class="col-md-3 mb-3">
                 <div class="card mx-auto"> <!--tamaño de la tarjeta-->
                     <div class="card-header bg-secondary text-center ml-2">
@@ -35,17 +37,42 @@
                     </div>
                 </div>
             </div>
+
+            <!--Creamos una tarjeta con imagen, tarjeta 3-->
+            <div class="col-md-3 mb-3">
+                <div class="card mx-auto"> <!--tamaño de la tarjeta-->
+                    <div class="card-header bg-secondary text-center ml-2">
+                        <strong class="card-title text-light">Instituciones Educativas</strong>
+                    </div> 
+                    <img class="card-img-top" src="/static/imagen/educacion/colegios.jpg" alt="Card image cap" style="width: 100%;">
+                    <div class="card-body">                       
+                        <p class="card-text">Campaña de seguridad vial en las escuelas</p>
+                        <a href="{% url 'home'%}" class="stretched-link"></a> <!--stretched-link colocamos la ficha como enlace-->
+                    <hr> <!--hr para linear una ficha-->
+                    <p class="h6 text-primary text-center" >Ingresar</p>
+                    </div>
+                </div>
+            </div>
+
+             <!--Creamos una tarjeta con imagen, tarjeta 4-->
+             <div class="col-md-3 mb-3">
+                <div class="card mx-auto"> <!--tamaño de la tarjeta-->
+                    <div class="card-header bg-secondary text-center ml-2">
+                        <strong class="card-title text-light">Instituciones Educativas</strong>
+                    </div> 
+                    <img class="card-img-top" src="/static/imagen/educacion/colegios.jpg" alt="Card image cap" style="width: 100%;">
+                    <div class="card-body">                       
+                        <p class="card-text">Campaña de seguridad vial en las escuelas</p>
+                        <a href="{% url 'home'%}" class="stretched-link"></a> <!--stretched-link colocamos la ficha como enlace-->
+                    <hr> <!--hr para linear una ficha-->
+                    <p class="h6 text-primary text-center" >Ingresar</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
         
-        <div class="row" style="background:#383e77;">
-            <p>hola</p>
-        </div>
         
-
-
-
-
-
     </div>
 {% endblock contenido %}
 
