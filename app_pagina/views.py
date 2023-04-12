@@ -9,4 +9,7 @@ def dashboard(request):
 
 def educacion(request):
     return render(request, 'html/educacion.html')
+
+def patrulleritos(request):
+    return render(request, 'html/patrulleritos.html')
   
