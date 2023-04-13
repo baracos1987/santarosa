@@ -12,4 +12,7 @@ def educacion(request):
 
 def patrulleritos(request):
     return render(request, 'html/patrulleritos.html')
+
+def tramites(request):
+    return render(request, 'html/tramites.html')
   
