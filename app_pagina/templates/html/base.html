@@ -23,13 +23,13 @@
        
 
     </head>
-    <body>
+    
         <body style="background: #afcff8;">
    
             <div class="container mt-1">
                 <!--Logo o imagen de santa rosa de osos-->
                 <div class="row">
-                    <div class="col-md-12" style="background:#383e77;">
+                    <div class="col-md-12 rounded-top" style="background:#383e77;">
                         <h6></h6>
                       <img class="img-thumbnail" src="/static/imagen/santalogo.jpg" width="1300" height="150">
                     </div>
@@ -47,7 +47,8 @@
                     <div class="col-md-8 text-white text-center" style="background: #383e77;">
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-2">
                             <a class="btn btn-primary btn-sm" href="{% url 'dashboard' %}" role="button">Dashboard</a>
-                            <a class="btn btn-primary btn-sm" href="{% url 'educacion' %}" role="button">Educacion Vial</a>
+                            <a class="btn btn-primary btn-sm" href="{% url 'educacion' %}" role="button">Educación Vial</a>
+                            <a class="btn btn-primary btn-sm" href="{% url 'tramites' %}" role="button">Trámites</a>
                         </div>
                         
                     </div>
@@ -60,14 +61,14 @@
                         <hr>
                    </div>
                 
-                 </div>   
+                 </div> 
+                 
             </div> 
 
             <!--bloque para codigo contenido-->
             {% block contenido %}
 
             {% endblock %}
-
             
             
             <!--bloque para codigo de java Script-->
@@ -75,10 +76,16 @@
 
             {% endblock js %}
 
-          
-
-            
-
+            <!--Se agrega en pie de pagina base-->
+            <div class="container">
+                <div class="row  rounded-bottom text-center text-white" style="background: #383e77;">
+                    <div class="col-md-12">
+                    <hr>
+                    <h6 class="display-7">Alcaldia de Santa Rosa de Osos "Segura, Educada y Competitiva" </h6>
+                    </div>
+                </div>
+            </div>
+                    
     </body>
     
 </html>
