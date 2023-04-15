@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'colorfield', #colores modificar para admin
     'app_pagina.apps.AppPaginaConfig', #.apps.AppPaginaConfig se modifica el nombre de la App
+    'django.contrib.humanize', #cargar formato moneda *3
 ]
 
 X_FRAME_OPTIONS='SAMEORIGIN' # para modificar el admin de django
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware', #configuracion moneda*3
 ]
 
 ROOT_URLCONF = 'psanta.urls'
@@ -130,6 +132,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+#carpeta media para guardar las imagenes del admin *2
+import os 
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
