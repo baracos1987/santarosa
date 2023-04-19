@@ -23,6 +23,9 @@ def patrulleritos(request):
 def tramites(request):
     return render(request, 'html/tramites.html')
 
+def requisitos(request):
+    return render(request, 'html/requisitos.html')
+
 #redirecciona al panel del admin *4
 def admin(request):
     return redirect(reverse('admin:index'))
@@ -34,9 +37,10 @@ def tarifas(request):
 """
 
 #Funcion para pasar los datos de la tabla tarifas motos al template tarifas.html *5
+#utilizamos order_by para organizarlos ascendentemente
 def tarifas(request):
-    datos_tarifas_moto = tarifas_motos.objects.all()
-    datos_tarifas_carro = tarifas_carro.objects.all()
+    datos_tarifas_moto = tarifas_motos.objects.all().order_by('descripcion_tarifa')
+    datos_tarifas_carro = tarifas_carro.objects.all().order_by('descripcion_tarifa')
     return render(request, 'html/tarifas.html', {'datos_tarifas_moto':datos_tarifas_moto, 'datos_tarifas_carro':datos_tarifas_carro})
 
 

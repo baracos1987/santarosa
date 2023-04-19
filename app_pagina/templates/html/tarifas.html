@@ -5,17 +5,23 @@
 <!--cargamos estilo CSS-->
 {% block css %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/tablas.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/tamaño_letra_tabla.css' %}">
+
 {% endblock %}
 
 {% block contenido%}
 <!--tabla_tarifas_motos *5-->
 <div class="container">
-        
-    
+
         <div class="row" style="background: #383e77;">
-            <div class="col-md-12">
-                <h3 class="text-center text-white">TARIFAS MOTOCICLETAS</h3>
-                <table class="mt-3 w-100">
+            <div class="col-md-2">
+
+            </div>
+
+            <div class="col-md-8">
+                <a class="btn btn-secondary  btn-sm mb-2" href="{% url 'requisitos' %}" role="button">Requisitos</a>
+                <h3 class="text-center text-white">TARIFAS MOTOCICLETAS AÑO 2023</h3>
+                <table class="mt-3 w-100 table-font"> <!--table-font llamamos css para el tamaño de letra-->
                     <thead class="text-center" style="background: #3f83db;">
                         <tr>
                             <th>Descripcion</th>
@@ -27,7 +33,7 @@
                     <tbody style="background: #c4daf8;">
                         {% for tarifasMoto in datos_tarifas_moto %} <!--datos_tarifas_motos se encuentra en la views.py, variable que creamos nosotros para conectar con los datos-->
                         <tr>
-                            <td>{{ tarifasMoto.descripcion_tarifa }}</td>
+                            <td >{{ tarifasMoto.descripcion_tarifa }}</td>
                             <td class="text-right">${{ tarifasMoto.valor_tarifa|intcomma }}</td>
                             <td class="text-right">${{ tarifasMoto.valor_tarifa_RUNT|intcomma }}</td>
                             <td class="text-right">${{ tarifasMoto.valor_total|intcomma }}</td>
@@ -36,12 +42,21 @@
                     </tbody>
                 </table>
             </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+    
+    <div class="row" style="background: #383e77;">
+        <div class="col-md-2">
+
         </div>
 
-    <div class="row" style="background: #383e77;">
-        <div class="col-md-12">
-                <h3 class="text-center text-white">TARIFAS CARRO</h3>
-                <table class="mt-3 w-100">
+        <div class="col-md-8">
+                
+                <hr class="text-white"> <!--Linea separadora color blanco-->
+                <h3 class="text-center text-white">TARIFAS DE VEHICULOS Y MAQUINARIA AÑO 2023</h3>
+                <table class="mt-3 w-100 table-font"> <!--w-100 es para ampliar la tabla-->
                     <thead class="text-center" style="background: #3f83db;">
                         <tr>
                             <th>Descripcion</th>
@@ -61,6 +76,9 @@
                         {% endfor %}
                     </tbody>
                 </table>
+            </div>
+            <div class="col-md-2">
+
             </div>
         </div>
     </div>   

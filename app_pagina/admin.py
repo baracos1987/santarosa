@@ -10,10 +10,6 @@ class TarifasAdmin(admin.ModelAdmin):
     ordering = ["descripcion_tarifa"] # ordenar ascendentemente
 
 
-
-    
-    
-
-# Register your models here.
+# Registramos las tablas para mostrar en el admin, tambien llamamos la clase TarifasAdmin
 admin.site.register(tarifas_motos, TarifasAdmin)
 admin.site.register(tarifas_carro, TarifasAdmin)
