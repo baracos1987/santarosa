@@ -1,0 +1,72 @@
+{% extends 'html/base.html' %}
+{% load static %} <!--cargamos archiso estaticos -->
+{% load humanize %} <!--cargamos los puntos miles -->
+
+
+<!--cargamos estilo CSS-->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/tablas.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/tamaño_letra_tabla.css' %}">
+{% endblock %}
+
+{% block contenido%}
+<div class="container">
+
+    <div class="row" style="background: #383e77;">
+
+        <div class="col-md-4">
+            <h4 class="text-center text-white">Traspaso Carro Particular</h4>
+            <table class="mt-3 w-100 table-font"> <!--table-font llamamos css para el tamaño de letra-->
+                <thead class="text-center" style="background: #3f83db;">
+                    <tr>
+                        <th><h5 class="text-white">Requisitos</h5></th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody style="background: #c4daf8;">
+                    {% for requisitosTraspasoCarro in requisitos_traspaso_carro_particular %} <!--datos_tarifas_motos se encuentra en la views.py, variable que creamos nosotros para conectar con los datos-->
+                    <tr>
+                        <td >{{ requisitosTraspasoCarro.requisitos_carro }}</td> <!--requisitos_carro lo llamamos del model.py-->
+                                                                        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="text-center text-white mt-3">
+                <h6>VALOR TRAMITE ${{ campo_total_tras_carro|intcomma }}</h6>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h4 class="text-center text-white">Inicial Carro Particular</h4>
+            <table class="mt-3 w-100 table-font"> <!--table-font llamamos css para el tamaño de letra-->
+                <thead class="text-center" style="background: #3f83db;">
+                    <tr>
+                        <th><h5 class="text-white">Requisitos</h5></th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody style="background: #c4daf8;">
+                    {% for requisitos in requisitos_inicial_carro_particular %} <!--datos_tarifas_motos se encuentra en la views.py, variable que creamos nosotros para conectar con los datos-->
+                    <tr>
+                        <td >{{ requisitos.requisitos_carro }}</td>
+                                                                        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="text-center text-white mt-3">
+                <h6>VALOR TRAMITE ${{ campo_total_MI_carro|intcomma }}</h6>
+            </div>
+            
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock contenido %}

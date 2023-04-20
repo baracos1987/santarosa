@@ -52,4 +52,41 @@ class tarifas_carro(models.Model):
 def calculate_sum(sender, instance, **kwargs):
     instance.valor_total = instance.valor_tarifa + instance.valor_tarifa_RUNT   
 
+#-------------------------creamos la tabla requisitos-----------------------------
+class requisitos_tramites(models.Model):
+    descripcion = models.CharField('Descripcion', max_length=200, blank=False)
 
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'requisitos_tramites'
+        verbose_name_plural ='Listado Requisitos Tramites'
+
+    #colocamos la descripcion como campo principal
+    def __str__(self):
+        return self.descripcion
+#---------------creamos la tabla requisitos Inicial vehiculo particular------------
+class inicial_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'inicial_carro_particular'
+        verbose_name_plural ='Requisitos Carro Particular'
+
+    #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+
+#---------------creamos la tabla requisitos Inicial vehiculo particular------------
+class traspaso_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'traspaso_carro_particular'
+        verbose_name_plural ='Requisitos Traspaso Carro Particular'
+
+    #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+    
