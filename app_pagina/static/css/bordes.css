@@ -1,0 +1,15 @@
+.borde-izquierdo-amarillo {
+    border-left: 7px solid rgb(252, 188, 12);
+  }
+
+  .borde-izquierdo-verde {
+    border-left: 7px solid rgb(4, 221, 40);
+  }
+
+  .borde-izquierdo-rojo {
+    border-left: 7px solid rgb(189, 4, 35);
+  }
+
+  .borde-izquierdo-azul {
+    border-left: 7px solid rgb(11, 200, 233);
+  }

@@ -4,7 +4,7 @@ from django.urls import reverse #panel adminsitrador *4
 
 #estas librerias es que llamar los datos de la tabla tarifas motos *5 
 from django.shortcuts import render
-from app_pagina.models import tarifas_motos, tarifas_carro, inicial_carro_particular, traspaso_carro_particular
+from app_pagina.models import tarifas_motos, tarifas_carro, inicial_carro_particular, traspaso_carro_particular, rematricula_carro_particular
 
 
 # Creamos la vista para la base html
@@ -25,6 +25,9 @@ def tramites(request):
 
 def requisitos(request):
     return render(request, 'html/requisitos.html')
+
+def requisitosIndex(request):
+    return render(request, 'html/requisitosIndex.html')
 
 #redirecciona al panel del admin *4
 def admin(request):
@@ -49,13 +52,20 @@ def requisitos(request):
     fila2 = tarifas_carro.objects.get(id=3)
     campo_total_tras_carro = fila2.valor_total
 
+    fila3 = tarifas_carro.objects.get(id=2)
+    campo_total_Remat_carro = fila3.valor_total
+
     #traemos todos los objetos o datos de la tabla 
     requisitos_inicial_carro_particular = inicial_carro_particular.objects.all()
     requisitos_traspaso_carro_particular = traspaso_carro_particular.objects.all()
+    requisitos_rematricula_carro_particular = rematricula_carro_particular.objects.all()
+    #luego hacemos un retorno con renderizacion de las siguientes variables
     return render(request, 'html/requisitos.html',{'requisitos_inicial_carro_particular':requisitos_inicial_carro_particular,
                                                    'campo_total_MI_carro':campo_total_MI_carro,
                                                    'requisitos_traspaso_carro_particular':requisitos_traspaso_carro_particular,
-                                                   'campo_total_tras_carro':campo_total_tras_carro})
+                                                   'campo_total_tras_carro':campo_total_tras_carro,
+                                                   'requisitos_rematricula_carro_particular':requisitos_rematricula_carro_particular,
+                                                   'campo_total_Remat_carro':campo_total_Remat_carro})
 
 
 

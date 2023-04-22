@@ -1,0 +1,87 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+{% block css %}
+<link href="{% static 'css/bordes.css' %}" rel="stylesheet">
+<link href="{% static 'css/imagenPequeña.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block contenido %}
+<div class="container">
+
+    <div class="row" style="background: #383e77;">
+        <h6 class="text-white text-center mb-3">REQUISITOS PARA REALIZAR TRAMITES DE VEHICULOS</h6>
+    </div>
+
+    <div class="row" style="background: #383e77;">
+        <div class="col-md-3 mb-3">
+            <div class="card mb-4 borde-izquierdo-verde shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mr-2">
+                            <div class="text-dark mb-2 text-center justify-content-center">Vehículo Motocicleta</div>
+                            
+                        </div>
+                        <div class="col-md-6 d-flex">
+                            <img class="card-img-top mx-auto" src="/static/imagen/moto.png" alt="Card image cap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card mb-4 borde-izquierdo-rojo shadow h-100 py-2">  
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mr-2">
+                            <div class="text-dark mb-2 text-center justify-content-center">Vehículo Particular</div>
+                            
+                        </div>
+                        <div class="col-md-6 d-flex">
+                            <img class="card-img-top mx-auto img-fluid" src="/static/imagen/carro.png" alt="Card image cap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card mb-4 borde-izquierdo-azul shadow h-100 py-2">  
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mr-2">
+                            <div class="text-dark mb-2 text-center justify-content-center">Vehículo Público</div>
+                            
+                        </div>
+                        <div class="col-md-6 d-flex">
+                            <img class="card-img-top mx-auto" src="/static/imagen/buseta.png" alt="Card image cap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card mb-4 borde-izquierdo-amarillo shadow h-100 py-2">  
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mr-2">
+                            <div class="text-dark mb-2 text-center justify-content-center">Maquinaria Amarilla</div>
+                        </div>
+                        <div class="col-md-6 d-flex">
+                            <img class="card-img-top mx-auto" src="/static/imagen/maquinaria.png" alt="Card image cap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+</div>
+{% endblock contenido %}

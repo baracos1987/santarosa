@@ -59,25 +59,25 @@ class requisitos_tramites(models.Model):
     #colocamos un alias a la tabla 
     class Meta:
         verbose_name = 'requisitos_tramites'
-        verbose_name_plural ='Listado Requisitos Tramites'
+        verbose_name_plural ='Requisitos Listado Tramites'
 
     #colocamos la descripcion como campo principal
     def __str__(self):
         return self.descripcion
-#---------------creamos la tabla requisitos Inicial vehiculo particular------------
+#---------------creamos la tabla requisitos Inicial carro particular------------
 class inicial_carro_particular(models.Model):
     requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
 
     #colocamos un alias a la tabla 
     class Meta:
         verbose_name = 'inicial_carro_particular'
-        verbose_name_plural ='Requisitos Carro Particular'
+        verbose_name_plural ='Requisitos Inicial Carro Particular'
 
     #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
     def __str__(self):
         return f"{self.requisitos_carro.descripcion}"
 
-#---------------creamos la tabla requisitos Inicial vehiculo particular------------
+#---------------creamos la tabla requisitos traspaso carro particular------------
 class traspaso_carro_particular(models.Model):
     requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
 
@@ -89,4 +89,17 @@ class traspaso_carro_particular(models.Model):
     #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
     def __str__(self):
         return f"{self.requisitos_carro.descripcion}"
-    
+
+
+#---------------creamos la tabla requisitos Re matricula carro particular------------
+class rematricula_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'rematricula_carro_particular'
+        verbose_name_plural ='Requisitos ReMatricula Carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
