@@ -46,7 +46,7 @@ nav {
     display: flex;
     justify-content: flex-end;/*flex-start - center - flex-end*/ /*horizontal*/
     align-items: center;
-    height: 100%;
+    
 }
 
 nav > ul {

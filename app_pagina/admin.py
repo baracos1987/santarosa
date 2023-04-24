@@ -1,6 +1,6 @@
 from django.contrib import admin
 from.models import tarifas_motos, tarifas_carro, requisitos_tramites, inicial_carro_particular
-from.models import traspaso_carro_particular, rematricula_carro_particular
+from.models import traspaso_carro_particular, rematricula_carro_particular, remate_carro_particular
 
 
 class TarifasAdmin(admin.ModelAdmin):
@@ -19,3 +19,4 @@ admin.site.register(requisitos_tramites)
 admin.site.register(inicial_carro_particular)
 admin.site.register(traspaso_carro_particular)
 admin.site.register(rematricula_carro_particular)
+admin.site.register(remate_carro_particular)

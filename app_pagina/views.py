@@ -2,10 +2,11 @@ from django.shortcuts import render
 from django.shortcuts import redirect# panel administrador *4
 from django.urls import reverse #panel adminsitrador *4
 
+
 #estas librerias es que llamar los datos de la tabla tarifas motos *5 
 from django.shortcuts import render
 from app_pagina.models import tarifas_motos, tarifas_carro, inicial_carro_particular, traspaso_carro_particular, rematricula_carro_particular
-
+from app_pagina.models import remate_carro_particular
 
 # Creamos la vista para la base html
 def home(request):
@@ -59,13 +60,15 @@ def requisitos(request):
     requisitos_inicial_carro_particular = inicial_carro_particular.objects.all()
     requisitos_traspaso_carro_particular = traspaso_carro_particular.objects.all()
     requisitos_rematricula_carro_particular = rematricula_carro_particular.objects.all()
+    requisitos_remate_carro_particular = remate_carro_particular.objects.all()
     #luego hacemos un retorno con renderizacion de las siguientes variables
     return render(request, 'html/requisitos.html',{'requisitos_inicial_carro_particular':requisitos_inicial_carro_particular,
                                                    'campo_total_MI_carro':campo_total_MI_carro,
                                                    'requisitos_traspaso_carro_particular':requisitos_traspaso_carro_particular,
                                                    'campo_total_tras_carro':campo_total_tras_carro,
                                                    'requisitos_rematricula_carro_particular':requisitos_rematricula_carro_particular,
-                                                   'campo_total_Remat_carro':campo_total_Remat_carro})
+                                                   'campo_total_Remat_carro':campo_total_Remat_carro,
+                                                   'requisitos_remate_carro_particular':requisitos_remate_carro_particular})
 
 
 

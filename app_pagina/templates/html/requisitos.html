@@ -38,31 +38,29 @@
             
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4">  
             <table class="mt-3 w-100 table-font"> <!--table-font llamamos css para el tamaño de letra-->
                 <thead class="text-center" style="background: #3f83db;">
                     <tr>
-                        <th><h6 class="text-white">Inicial Carro Particular</h6></th>
-                        
+                        <th><h6 class="text-white">Traspaso por Remate</h6></th>
                     </tr>
                 </thead>
                 <tbody style="background: #c4daf8;">
-                    {% for requisitos in requisitos_inicial_carro_particular %} <!--datos_tarifas_motos se encuentra en la views.py, variable que creamos nosotros para conectar con los datos-->
+                    {% for requisitosRemateCarro in requisitos_remate_carro_particular %} <!--es el campo que esta dentro de la tabla requisitos_traspaso_carro_particular en model.py-->
                     <tr>
-                        <td >{{ requisitos.requisitos_carro }}</td><!--es el campo que esta dentro de la tabla requisitos_inicial_carro_particular en model.py-->
-                                                                        
+                        <td >{{ requisitosRemateCarro.requisitos_carro }}</td> <!--requisitos_carro lo llamamos del model.py-->
+
                     </tr>
                     {% endfor %}
-                    <tfoot class="text-center text-white" style="background: #3f83db;">
+                    <tfoot class="text-center" style="background: #3f83db;">
                         <tr>
-                          <td><h6>Valor ${{ campo_total_MI_carro|intcomma }} </h6></td>
+                          <td><h6 class="text-white">Valor: ${{ campo_total_tras_carro|intcomma }} + 1%  Avaluo Carro</h6></td>
                         </tr>
-                    </tfoot>
+                      </tfoot>
                 </tbody>
             </table>
-            
-            
         </div>
+
         <div class="col-md-4">
             <table class="mt-3 w-100 table-font"> <!--table-font llamamos css para el tamaño de letra-->
                 <thead class="text-center" style="background: #3f83db;">
@@ -88,6 +86,32 @@
 
         </div>
     </div>
+    
+        <div class="row" style="background: #383e77;">
+            <div class="col-md-4">
+                <table class="mt-3 w-100 table-font"> <!--table-font llamamos css para el tamaño de letra-->
+                    <thead class="text-center" style="background: #3f83db;">
+                        <tr>
+                            <th><h6 class="text-white">Inicial Carro Particular</h6></th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody style="background: #c4daf8;">
+                        {% for requisitos in requisitos_inicial_carro_particular %} <!--datos_tarifas_motos se encuentra en la views.py, variable que creamos nosotros para conectar con los datos-->
+                        <tr>
+                            <td >{{ requisitos.requisitos_carro }}</td><!--es el campo que esta dentro de la tabla requisitos_inicial_carro_particular en model.py-->
+                                                                            
+                        </tr>
+                        {% endfor %}
+                        <tfoot class="text-center text-white" style="background: #3f83db;">
+                            <tr>
+                              <td><h6>Valor ${{ campo_total_MI_carro|intcomma }} </h6></td>
+                            </tr>
+                        </tfoot>
+                    </tbody>
+                </table>
+            </div>   
+        </div>
 
 </div>
 

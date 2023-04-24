@@ -103,3 +103,16 @@ class rematricula_carro_particular(models.Model):
         #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
     def __str__(self):
         return f"{self.requisitos_carro.descripcion}"
+
+#---------------creamos la tabla requisitos por remate carro particular------------
+class remate_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'remate_carro_particular'
+        verbose_name_plural ='Requisitos Remate Carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"

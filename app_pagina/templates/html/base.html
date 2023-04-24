@@ -31,13 +31,12 @@
 </head>
     
         <body style="background: #afcff8;">
-   
+            <br><br>
             <div class="container mt-1">
                 <!--Logo o imagen de santa rosa de osos-->
                 <div class="row">
                     <div class="col-md-12 rounded-top" style="background:#383e77;">
-                        <h6></h6>
-                      <img class="img-thumbnail rounded-0" src="/static/imagen/santalogo.jpg" width="1300" height="150">
+                      <img class="img-thumbnail rounded-0" src="/static/imagen/santalogo.jpg" width="1300" height="150" style="margin-top: 1rem">
                     </div>
                 </div>
         
@@ -45,7 +44,7 @@
                 <div class="row">
                     
                     <div class="col-md-12 text-white" style="background: #383e77;">
-                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                                 <div class="container-fluid" >
                                         <button class="navbar-toggler btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon"></span>
@@ -68,7 +67,7 @@
                                             
                                     </div>
                                         <li class="nav-item ms-auto justify-content-start align-items-center d-flex">
-                                            <a class="nav-link logo-link text-dark" href="{% url 'admin' %}"> Admin
+                                            <a class="nav-link logo-link text-dark" href="{% url 'admin' %}"> Iniciar Sesion
                                             <img src="/static/imagen/usuarioAdmin.svg">
                                             </a>
                                         </li>
@@ -93,15 +92,6 @@
             
             
             <!--bloque para codigo de java Script-->
-            <script>
-                function closeNavbar() {
-                  var nav = document.querySelector('#navbarNav');
-                  if (nav.classList.contains('show')) {
-                    var toggler = document.querySelector('.navbar-toggler');
-                    toggler.click();
-                  }
-                }
-              </script>
             {% block js %}
 
             {% endblock js %}

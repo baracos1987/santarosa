@@ -2,8 +2,8 @@
 {% load static %}
 
 <!--script y ruta del codigo js para las imagenes con efecto bonito, debe de estar en base-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="{% static 'js/imagenes.js' %}"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+<!-- <script src="{% static 'js/imagenes.js' %}"></script> -->
 
 <!--llamamos bloque JS -->
 {% block js %}
@@ -13,9 +13,10 @@
 <!--llamamos bloque CSS -->
 {% block css %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-<!--llamamos la ruta donde esta los esilos css -->
-<link rel="stylesheet" href="{% static '/css/estilos.css' %}">
+<!--llamamos la ruta donde esta los esilos css para organizar las imagenes -->
+<link rel="stylesheet" href="{% static '/css/estilosImagenPatrulleritos.css' %}">
 {% endblock %}
+
 
 
 {% block contenido %}
@@ -49,8 +50,8 @@
 </div>
           <!--script y ruta del codigo js para las imagenes con efecto bonito, podemos colocarlo en base.html tambien-->
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-          <script src="{% static 'js/menu.js' %}"></script>
+       
     
-
+          
 
 {% endblock %}
