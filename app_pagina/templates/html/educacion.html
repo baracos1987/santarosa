@@ -1,9 +1,11 @@
 {% extends 'html/base.html' %}
 {% load static %}
 
-{% block js %}
+{% block css %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/carruselImagen.css' %}">
-{% endblock js %}
+
+{% endblock %}
+
 
 {% block contenido %}
 
@@ -46,11 +48,17 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
+            
         </div>   
+
+     
+        <div class="row" style="background:#383e77">
+          <br>
+        </div>
 
         <!--Creamos una tarjeta con imagen, tarjeta 1-->
         <div class="row" style="background:#383e77;">
-
+            
             <div class="col-md-3 mb-3">
                 <div class="card mx-auto"> <!--tamaño de la tarjeta-->
                     <div class="card-header bg-secondary text-center ml-2">

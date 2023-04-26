@@ -116,3 +116,213 @@ class remate_carro_particular(models.Model):
         #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
     def __str__(self):
         return f"{self.requisitos_carro.descripcion}"
+
+#---------------creamos la tabla requisitos por traspaso indeterminado carro particular------------
+class traspaso_indeter_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'indeterminado_carro_particular'
+        verbose_name_plural ='Requisitos Traspaso Indeterminado Carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+
+#---------------creamos la tabla requisitos cancelacion licencia trnasito--------------------
+
+class cancelacion_licencia_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'cancelacion_licencia_carro_particular'
+        verbose_name_plural ='Requisitos Cancelacion licencia Carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+    
+#---------------creamos la tabla requisitos cancelacion licencia trnasito--------------------
+
+class cancela_licen_deterio_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'cancela_licen_deterio_carro_particular'
+        verbose_name_plural ='Requisitos Cancelación licencia Deterioro Carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+
+#---------------creamos la tabla requisitos duplicado licencia de transito carro--------------------
+
+class Dupli_Licencia_carro_parti(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'Dupli_Licencia_carro_parti'
+        verbose_name_plural ='Requisitos Duplicado Licencia Carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+
+#---------------creamos la tabla requisitos Inscripcion o levantamiento prenda carro--------------------
+
+class Inscrip_levanta_prenda_carro_parti(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'Inscrip_levanta_prenda_carro_parti'
+        verbose_name_plural ='Requisitos Inscripcion o Levanta Prenda Carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+    
+#---------------creamos la tabla requisitos cambio de color carro particular--------------------
+
+class cambio_color_carro_parti(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'cambio_color_carro_parti'
+        verbose_name_plural ='Requisitos Cambio Color Carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+    
+#---------------creamos la tabla requisitos cambio servicio particular a publico--------------------
+
+class cambio_servicio_parti_publico(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'cambio_servicio_parti_publico'
+        verbose_name_plural ='Requisitos Cambio Cambio Particular a Publico'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+
+
+#---------------creamos la tabla requisitos duplicado placas carro particular----------------------
+
+class duplicado_placas_carro_parti(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'duplicado_placas_carro_parti'
+        verbose_name_plural ='Requisitos Duplicado Placa Carro particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+
+#---------------creamos la tabla requisitos cambio motor regrabacion particular----------------------
+
+class cambio_motor_regra_carro_parti(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'cambio_motor_regra_carro_parti'
+        verbose_name_plural ='Requisitos Cambio Motor Regrabacion Carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+    
+#---------------creamos la tabla requisitos cambio motor (vehiculo nuevo) carro particular--------------------
+
+class cambio_motor_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'cambio_motor_carro_particular'
+        verbose_name_plural ='Requisitos Cambio Motor Carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+
+#---creamos la tabla requisitos cambio de carroceria (EN CASO DE SER DE OTRO VEHICULO) carro particular----
+
+class cambio_carroce_otro_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'cambio_carroce_otro_carro_particular'
+        verbose_name_plural ='Requisitos cambio Carroceria otro vehiculo carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+    
+#---------------creamos la tabla requisitos cambio de carroceria carro particular------------------
+
+class cambio_carroce_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'cambio_carroce_carro_particular'
+        verbose_name_plural ='Requisitos cambio Carroceria vehiculo carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+
+#---------------creamos la tabla requisitos repotenciacion carro particular------------------
+
+class repotenciacion_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'repotenciacion_carro_particular'
+        verbose_name_plural ='Requisitos Repotenciacion Carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+
+#---------------creamos la tabla requisitos radicado de cuenta carro particular------------------
+
+class radicado_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'radicado_carro_particular'
+        verbose_name_plural ='Requisitos Radicado De CuentaCarro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
+
+#---------------creamos la tabla requisitos transformacion carro particular------------------
+
+class transformacion_carro_particular(models.Model):
+    requisitos_carro = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'transformacion_carro_particular'
+        verbose_name_plural ='Requisitos Transformacion Carro Particular'
+
+        #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_carro.descripcion}"
