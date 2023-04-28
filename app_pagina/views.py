@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.shortcuts import redirect# panel administrador *4
 from django.urls import reverse #panel adminsitrador *4
 
+from .forms import RequisitosForm
+#from .forms import OpcionForm #importamos formulario de forms.py llamamos OpcionForm *7
 
 #estas librerias es que llamar los datos de la tabla tarifas motos *5 
 from django.shortcuts import render
@@ -27,8 +29,8 @@ def patrulleritos(request):
 def tramites(request):
     return render(request, 'html/tramites.html')
 
-def requisitos(request):
-    return render(request, 'html/requisitos.html')
+#def requisitos(request):
+#    return render(request, 'html/requisitos.html')
 
 def requisitosIndex(request):
     return render(request, 'html/requisitosIndex.html')
@@ -68,23 +70,20 @@ def requisitos(request):
     requisitos_rematricula_carro_particular = rematricula_carro_particular.objects.all()
     requisitos_remate_carro_particular = remate_carro_particular.objects.all()
     requisitos_traspaso_indeter_carro_particular = traspaso_indeter_carro_particular.objects.all()
-    requisitos_cancela_licencia_carro_particular = cancelacion_licencia_carro_particular.objects()
-    requisitos_cancela_lic_Dete_carro_particular = cancela_licen_deterio_carro_particular.objects()
-    requisitos_Dupli_lic_tran_carro_particular = Dupli_Licencia_carro_parti.objects()
-    requisitos_Inscri_levanta_carro_particular = Inscrip_levanta_prenda_carro_parti.objects()
-    requisitos_Cambio_Color_carro_particular = cambio_color_carro_parti.objects()
-    requisitos_Cambio_serv_particular_publico = cambio_servicio_parti_publico.objects()
-    requisitos_duplicado_placa_carro_particular = duplicado_placas_carro_parti.objects()
-    requisitos_cambio_motor_regra_carro_particular = cambio_motor_regra_carro_parti.objects()
-    requisitos_cambio_motor__carro_particular = cambio_motor_carro_particular.objects()
-    requisitos_cambio_carro_otro_carro_particular = cambio_carroce_otro_carro_particular.objects()
-    requisitos_cambio_carro_carro_particular = cambio_carroce_carro_particular.objects()
-    requisitos_repotenciacion_carro_particular = repotenciacion_carro_particular.objects()
-    requisitos_radicado_carro_particular = radicado_carro_particular.objects()
-    requisitos_transformacion_carro_particular= transformacion_carro_particular.objects()
-
-    
-    
+    requisitos_cancela_licencia_carro_particular = cancelacion_licencia_carro_particular.objects.all()
+    requisitos_cancela_lic_Dete_carro_particular = cancela_licen_deterio_carro_particular.objects.all()
+    requisitos_Dupli_lic_tran_carro_particular = Dupli_Licencia_carro_parti.objects.all()
+    requisitos_Inscri_levanta_carro_particular = Inscrip_levanta_prenda_carro_parti.objects.all()
+    requisitos_Cambio_Color_carro_particular = cambio_color_carro_parti.objects.all()
+    requisitos_Cambio_serv_particular_publico = cambio_servicio_parti_publico.objects.all()
+    requisitos_duplicado_placa_carro_particular = duplicado_placas_carro_parti.objects.all()
+    requisitos_cambio_motor_regra_carro_particular = cambio_motor_regra_carro_parti.objects.all()
+    requisitos_cambio_motor__carro_particular = cambio_motor_carro_particular.objects.all()
+    requisitos_cambio_carro_otro_carro_particular = cambio_carroce_otro_carro_particular.objects.all()
+    requisitos_cambio_carro_carro_particular = cambio_carroce_carro_particular.objects.all()
+    requisitos_repotenciacion_carro_particular = repotenciacion_carro_particular.objects.all()
+    requisitos_radicado_carro_particular = radicado_carro_particular.objects.all()
+    requisitos_transformacion_carro_particular= transformacion_carro_particular.objects.all()
 
     
     #luego hacemos un retorno con renderizacion de las siguientes variables
@@ -111,6 +110,22 @@ def requisitos(request):
                                                    'requisitos_repotenciacion_carro_particular':requisitos_repotenciacion_carro_particular,
                                                    'requisitos_radicado_carro_particular':requisitos_radicado_carro_particular,
                                                    'requisitos_transformacion_carro_particular':requisitos_transformacion_carro_particular})
+
+# creamos una funcion para llamar los requerimientos *7
+def requisitos2(request):
+    form = RequisitosForm(request.POST or None)
+    results = []
+    if form.is_valid():
+        opcion = form.cleaned_data['opcion']
+        if opcion == 'opcion1':
+            results = inicial_carro_particular.objects.all()
+        elif opcion == 'opcion2':
+            results = traspaso_carro_particular.objects.all()
+        elif opcion == 'opcion3':
+            results = rematricula_carro_particular.objects.all()
+
+    return render(request, 'html/requisitos2.html', {'form': form, 'results': results})
+
 
 
 

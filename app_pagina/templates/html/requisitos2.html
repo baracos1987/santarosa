@@ -1,0 +1,25 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+{% block contenido %}
+<div class="container">
+
+	<!--codigo para el buscador de requisitos *7-->
+	<form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Buscar</button>
+      </form>
+      
+      {% if results %}
+        <h2>Documentación Requerida</h2>
+        <ul>
+          {% for result in results %}
+            <li>{{ result.requisitos_carro }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+</div>
+
+{% endblock contenido %}

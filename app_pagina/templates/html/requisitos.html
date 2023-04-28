@@ -9,8 +9,11 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/tamaño_letra_tabla.css' %}">
 {% endblock %}
 
+
+
 {% block contenido%}
 <div class="container">
+
 
     <div class="row" style="background: #383e77;">
 
@@ -22,7 +25,7 @@
                     </tr>
                 </thead>
                 <tbody style="background: #c4daf8;">
-                    {% for requisitosTraspasoCarro in requisitos_traspaso_carro_particular %} <!--es el campo que esta dentro de la tabla requisitos_traspaso_carro_particular en model.py-->
+                    {% for requisitosTraspasoCarro in requisitos_traspaso_carro_particular %} <!--es el campo que esta dentro de la tabla requisitos_traspaso_carro_particular en views.py-->
                     <tr>
                         <td >{{ requisitosTraspasoCarro.requisitos_carro }}</td> <!--requisitos_carro lo llamamos del model.py-->
                                                                         
@@ -46,7 +49,7 @@
                     </tr>
                 </thead>
                 <tbody style="background: #c4daf8;">
-                    {% for requisitosRemateCarro in requisitos_remate_carro_particular %} <!--es el campo que esta dentro de la tabla requisitos_traspaso_carro_particular en model.py-->
+                    {% for requisitosRemateCarro in requisitos_remate_carro_particular %} <!--es el campo que esta dentro de la tabla requisitos_traspaso_carro_particular en views.py-->
                     <tr>
                         <td >{{ requisitosRemateCarro.requisitos_carro }}</td> <!--requisitos_carro lo llamamos del model.py-->
 
@@ -72,7 +75,7 @@
                 <tbody style="background: #c4daf8;">
                     {% for requisitos in requisitos_rematricula_carro_particular %} <!--datos_tarifas_motos se encuentra en la views.py, variable que creamos nosotros para conectar con los datos-->
                     <tr>
-                        <td >{{ requisitos.requisitos_carro }}</td><!--es el campo que esta dentro de la tabla rematricula_carro_particular en model.py-->
+                        <td >{{ requisitos.requisitos_carro }}</td><!--es el campo que esta dentro de la tabla rematricula_carro_particular en views.py-->
                                                                         
                     </tr>
                     {% endfor %}

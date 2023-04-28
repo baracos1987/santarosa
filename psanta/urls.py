@@ -19,9 +19,11 @@ from django.conf import settings #logo de santa admin *2
 from django.conf.urls.static import static #logo de santa admin *2
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('app_pagina.urls')), #agregamos la ruta app_pagina.urls
+    
     
 ]
 

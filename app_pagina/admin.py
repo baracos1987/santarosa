@@ -5,6 +5,8 @@ from.models import cancela_licen_deterio_carro_particular, Dupli_Licencia_carro_
 from.models import duplicado_placas_carro_parti, cambio_motor_regra_carro_parti,cambio_motor_carro_particular, cambio_carroce_otro_carro_particular, cambio_carroce_carro_particular
 from.models import repotenciacion_carro_particular, radicado_carro_particular,transformacion_carro_particular
 
+
+
 class TarifasAdmin(admin.ModelAdmin):
     list_display = ["descripcion_tarifa", "valor_tarifa", "valor_tarifa_RUNT", "valor_total"]
     #list_editable = ["valor_tarifa"] # campo editable en la columna valor tarifa
@@ -15,8 +17,8 @@ class TarifasAdmin(admin.ModelAdmin):
 
 
 # Registramos las tablas para mostrar en el admin, tambien llamamos la clase TarifasAdmin
-admin.site.register(tarifas_motos, TarifasAdmin)
-admin.site.register(tarifas_carro, TarifasAdmin)
+admin.site.register(tarifas_motos, TarifasAdmin, group='grupo1')
+admin.site.register(tarifas_carro, TarifasAdmin, group='grupo1')
 admin.site.register(requisitos_tramites)
 admin.site.register(inicial_carro_particular)
 admin.site.register(traspaso_carro_particular)
@@ -34,9 +36,9 @@ admin.site.register(cambio_motor_regra_carro_parti)
 admin.site.register(cambio_motor_carro_particular) 
 admin.site.register(cambio_carroce_otro_carro_particular) 
 admin.site.register(cambio_carroce_carro_particular) 
-admin.site.register(repotenciacion_carro_particular) 
-admin.site.register(radicado_carro_particular) 
-admin.site.register(transformacion_carro_particular)
+admin.site.register(repotenciacion_carro_particular)
+admin.site.register(radicado_carro_particular)
+admin.site.register(transformacion_carro_particular)  
 
 
 

@@ -3,6 +3,9 @@ from django.db.models.signals import pre_save #para guarda en la base de datos *
 from django.dispatch import receiver # guarda en la base de datos *1
 
 
+
+
+
 #-------------------------creamos la tabla tarifas motocicleta-----------------------------
 
 class tarifas_motos(models.Model):
