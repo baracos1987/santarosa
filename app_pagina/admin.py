@@ -1,9 +1,13 @@
 from django.contrib import admin
-from.models import tarifas_motos, tarifas_carro, requisitos_tramites, inicial_carro_particular
-from.models import traspaso_carro_particular, rematricula_carro_particular, remate_carro_particular, traspaso_indeter_carro_particular, cancelacion_licencia_carro_particular
-from.models import cancela_licen_deterio_carro_particular, Dupli_Licencia_carro_parti, Inscrip_levanta_prenda_carro_parti,cambio_color_carro_parti, cambio_servicio_parti_publico
-from.models import duplicado_placas_carro_parti, cambio_motor_regra_carro_parti,cambio_motor_carro_particular, cambio_carroce_otro_carro_particular, cambio_carroce_carro_particular
-from.models import repotenciacion_carro_particular, radicado_carro_particular,transformacion_carro_particular
+from.models import (tarifas_motos, tarifas_carro, requisitos_tramites, inicial_carro_particular,
+ traspaso_carro_particular, rematricula_carro_particular, remate_carro_particular, traspaso_indeter_carro_particular, 
+ cancelacion_licencia_carro_particular, cancela_licen_deterio_carro_particular, Dupli_Licencia_carro_parti, 
+ Inscrip_levanta_prenda_carro_parti,cambio_color_carro_parti, cambio_servicio_parti_publico,duplicado_placas_carro_parti, 
+ cambio_motor_regra_carro_parti,cambio_motor_carro_particular, cambio_carroce_otro_carro_particular, cambio_carroce_carro_particular,
+ repotenciacion_carro_particular, radicado_carro_particular,transformacion_carro_particular, inicial_prenda_carro, 
+ traspaso_prenda_carro_parti, blindaje_carro_parti, modifi_alerta_propi_carro_parti, modifi_alerta_acreedor_carro_parti,
+ traslado_cuenta_carro_parti, polarizado_carro_parti, cambio_conjunto_carro_parti, historial, inscripcion_RUNT, actualizacion_RUNT,
+ expedicion_Licencia_Conduccion, cambio_documento1, cambio_documento2) 
 
 
 
@@ -17,8 +21,8 @@ class TarifasAdmin(admin.ModelAdmin):
 
 
 # Registramos las tablas para mostrar en el admin, tambien llamamos la clase TarifasAdmin
-admin.site.register(tarifas_motos, TarifasAdmin, group='grupo1')
-admin.site.register(tarifas_carro, TarifasAdmin, group='grupo1')
+admin.site.register(tarifas_motos, TarifasAdmin)
+admin.site.register(tarifas_carro, TarifasAdmin)
 admin.site.register(requisitos_tramites)
 admin.site.register(inicial_carro_particular)
 admin.site.register(traspaso_carro_particular)
@@ -38,7 +42,21 @@ admin.site.register(cambio_carroce_otro_carro_particular)
 admin.site.register(cambio_carroce_carro_particular) 
 admin.site.register(repotenciacion_carro_particular)
 admin.site.register(radicado_carro_particular)
-admin.site.register(transformacion_carro_particular)  
+admin.site.register(transformacion_carro_particular) 
+admin.site.register(inicial_prenda_carro)
+admin.site.register(traspaso_prenda_carro_parti)
+admin.site.register(blindaje_carro_parti)
+admin.site.register(modifi_alerta_propi_carro_parti)
+admin.site.register(modifi_alerta_acreedor_carro_parti)
+admin.site.register(traslado_cuenta_carro_parti)
+admin.site.register(polarizado_carro_parti)
+admin.site.register(cambio_conjunto_carro_parti)
+admin.site.register(historial)
+admin.site.register(inscripcion_RUNT)
+admin.site.register(actualizacion_RUNT)
+admin.site.register(expedicion_Licencia_Conduccion)
+admin.site.register(cambio_documento1)
+admin.site.register(cambio_documento2)
 
 
 

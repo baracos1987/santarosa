@@ -1,0 +1,12 @@
+/* cuando la resolucion sea mayor a 768 el tamaño de letra es 14px y si es menor 769 el tamaño es de 20mx  */
+@media (max-width: 768px) {
+    .text-dark2 {
+      font-size: 14px;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .text-dark2 {
+      font-size: 23px;
+    }
+  }

@@ -1,0 +1,7 @@
+.navbar-nav li {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .navbar-nav li:last-child {
+    border-bottom: none;
+  }

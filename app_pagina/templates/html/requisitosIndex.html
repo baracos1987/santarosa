@@ -4,6 +4,7 @@
 {% block css %}
 <link href="{% static 'css/bordes.css' %}" rel="stylesheet">
 <link href="{% static 'css/imagenPequeña.css' %}" rel="stylesheet">
+<link href="{% static 'css/textoMxMin.css' %}" rel="stylesheet">
 {% endblock %}
 
 
@@ -15,12 +16,13 @@
     </div>
 
     <div class="row" style="background: #383e77;">
-        <div class="col-md-3 mb-3">
+        <div class="col-md-3 col-lg-4 mb-3">
             <div class="card mb-4 borde-izquierdo-verde shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6 mr-2">
-                            <div class="text-dark mb-2 text-center justify-content-center">Vehículo Motocicleta</div>
+                            
+                            <div class="text-dark2 mb-2 text-center justify-content-center">Vehículo Motocicleta</div>
                             
                         </div>
                         <div class="col-md-6 d-flex">
@@ -31,12 +33,12 @@
             </div>
         </div>
 
-        <div class="col-md-3 mb-3">
+        <div class="col-md-3 col-lg-4 mb-3">
             <div class="card mb-4 borde-izquierdo-rojo shadow h-100 py-2">  
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6 mr-2">
-                            <div class="text-dark mb-2 text-center justify-content-center">Vehículo Particular</div>
+                            <div class="text-dark2 mb-2 text-center justify-content-center">Vehículo Particular</div>
                             
                         </div>
                         <div class="col-md-6 d-flex">
@@ -48,12 +50,12 @@
             </div>
         </div>
 
-        <div class="col-md-3 mb-3">
+        <div class="col-md-3 col-lg-4 mb-3">
             <div class="card mb-4 borde-izquierdo-azul shadow h-100 py-2">  
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6 mr-2">
-                            <div class="text-dark mb-2 text-center justify-content-center">Vehículo Público</div>
+                            <div class="text-dark2 mb-2 text-center justify-content-center">Vehículo Público</div>
                             
                         </div>
                         <div class="col-md-6 d-flex">
@@ -64,12 +66,12 @@
             </div>
         </div>
 
-        <div class="col-md-3 mb-3">
+        <div class="col-md-3 col-lg-6 mb-3">
             <div class="card mb-4 borde-izquierdo-amarillo shadow h-100 py-2">  
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6 mr-2">
-                            <div class="text-dark mb-2 text-center justify-content-center">Maquinaria Amarilla</div>
+                            <div class="text-dark2 mb-2 text-center justify-content-center">Maquinaria Amarilla</div>
                         </div>
                         <div class="col-md-6 d-flex">
                             <img class="card-img-top mx-auto" src="/static/imagen/maquinaria.png" alt="Card image cap">
@@ -78,6 +80,29 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-md-3 col-lg-6 mb-3">
+            <div class="card mb-4 borde-izquierdo-azul-oscuro shadow h-100 py-2">  
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mr-2">
+                            <div class="text-dark2 mb-2 text-center justify-content-center">Otro Trámites</div>
+                        </div>
+                        <div class="col-md-6 d-flex">
+                            <img class="card-img-top mx-auto" src="/static/imagen/RNC.png" alt="Card image cap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" style="background: #383e77;">
+        <div class="col-md-12 text-center">
+            <br><br>
+            <img src="{%static '/imagen/Fondosanta.png'%}" class="rounded" style="max-width: 100%; opacity: 0.5;">
+          </div>
     </div>
 
     

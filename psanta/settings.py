@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ppwxfr(g(o2ueg)+d0c5dah!2!bd$9*xo$%j9-1n-pb0fi$zf=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['104.248.121.157']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -143,3 +143,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#ruta para Nginx
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/') 
