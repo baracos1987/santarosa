@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <tr>
+      <th>Cedula CC</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for _, row in dataframe.iterrows %}
+    <tr>
+      <td>{{ row.cedula }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

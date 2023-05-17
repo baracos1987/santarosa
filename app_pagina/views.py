@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import redirect# panel administrador *4
 from django.urls import reverse #panel adminsitrador *4
+import pandas as pd 
 
 from .forms import RequisitosForm
 #from .forms import OpcionForm #importamos formulario de forms.py llamamos OpcionForm *7
@@ -15,6 +16,13 @@ cambio_carroce_carro_particular, repotenciacion_carro_particular, radicado_carro
 traspaso_prenda_carro_parti, blindaje_carro_parti, modifi_alerta_propi_carro_parti, modifi_alerta_acreedor_carro_parti, traslado_cuenta_carro_parti,
 polarizado_carro_parti, cambio_conjunto_carro_parti, historial, inscripcion_RUNT, actualizacion_RUNT, expedicion_Licencia_Conduccion, 
 cambio_documento1, cambio_documento2)
+
+
+# definimos una funcion para llamar un archivo de csv con pandas
+def dataframe(request):
+    path ='media/morosos.csv'
+    df = pd.read_csv(path)
+    return render(request, 'html/datos.html', {'dataframe':df})
 
 # Creamos la vista para la base html
 def home(request):
