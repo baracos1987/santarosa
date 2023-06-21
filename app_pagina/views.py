@@ -131,8 +131,8 @@ def requisitos(request):
                                                    'requisitos_radicado_carro_particular':requisitos_radicado_carro_particular,
                                                    'requisitos_transformacion_carro_particular':requisitos_transformacion_carro_particular})
 """
-# creamos una funcion para llamar los requerimientos *7
-def requisitos2(request):
+# creamos una funcion para llamar los requerimientos vehiculos*7
+def requisitosVehiculo(request):
     form = RequisitosForm(request.POST or None)
     results = []
     if form.is_valid():
@@ -204,12 +204,83 @@ def requisitos2(request):
         elif opcion == 'opcion33':
             results = cambio_documento2.objects.all()
        
+    return render(request, 'html/requisitosVehiculo.html', {'form': form, 'results': results})
 
 
-    return render(request, 'html/requisitos2.html', {'form': form, 'results': results})
-
-
-
+# creamos una funcion para llamar los requerimientos vehiculos*7
+def requisitosMoto(request):
+    form = RequisitosForm(request.POST or None)
+    results = []
+    if form.is_valid():
+        opcion = form.cleaned_data['opcion']
+        if opcion == 'opcion1':
+            results = inicial_carro_particular.objects.all()
+        elif opcion == 'opcion3':
+            results = traspaso_carro_particular.objects.all()
+        elif opcion == 'opcion18':
+            results = rematricula_carro_particular.objects.all()
+        elif opcion == 'opcion20':
+            results = remate_carro_particular.objects.all()
+        elif opcion == 'opcion21':
+            results = traspaso_indeter_carro_particular.objects.all()
+        elif opcion == 'opcion25':
+            results = cancelacion_licencia_carro_particular.objects.all()
+        elif opcion == 'opcion7':
+            results = cancela_licen_deterio_carro_particular.objects.all()
+        elif opcion == 'opcion8':
+            results = Dupli_Licencia_carro_parti.objects.all()
+        elif opcion == 'opcion9':
+            results = Inscrip_levanta_prenda_carro_parti.objects.all()
+        elif opcion == 'opcion10':
+            results = cambio_color_carro_parti.objects.all()
+        elif opcion == 'opcion11':
+            results = cambio_servicio_parti_publico.objects.all() 
+        elif opcion == 'opcion12':
+            results = duplicado_placas_carro_parti.objects.all()
+        elif opcion == 'opcion13':
+            results = cambio_motor_regra_carro_parti.objects.all()
+        elif opcion == 'opcion14':
+            results = cambio_motor_carro_particular.objects.all()
+        elif opcion == 'opcion15':
+            results = cambio_carroce_otro_carro_particular.objects.all()
+        elif opcion == 'opcion16':
+            results = cambio_carroce_carro_particular.objects.all()    
+        elif opcion == 'opcion17':
+            results = repotenciacion_carro_particular.objects.all()
+        elif opcion == 'opcion5':
+            results = radicado_carro_particular.objects.all()
+        elif opcion == 'opcion19':
+            results = transformacion_carro_particular.objects.all()
+        elif opcion == 'opcion2':
+            results = inicial_prenda_carro.objects.all()
+        elif opcion == 'opcion4':
+            results = traspaso_prenda_carro_parti.objects.all()
+        elif opcion == 'opcion22':
+            results = blindaje_carro_parti.objects.all()
+        elif opcion == 'opcion23':
+            results = modifi_alerta_propi_carro_parti.objects.all()
+        elif opcion == 'opcion24':
+            results = modifi_alerta_acreedor_carro_parti.objects.all()
+        elif opcion == 'opcion6':
+            results = traslado_cuenta_carro_parti.objects.all()
+        elif opcion == 'opcion26':
+            results = polarizado_carro_parti.objects.all()
+        elif opcion == 'opcion27':
+            results = cambio_conjunto_carro_parti.objects.all()
+        elif opcion == 'opcion28':
+            results = historial.objects.all()
+        elif opcion == 'opcion29':
+            results = inscripcion_RUNT.objects.all()
+        elif opcion == 'opcion30':
+            results = actualizacion_RUNT.objects.all()
+        elif opcion == 'opcion31':
+            results = expedicion_Licencia_Conduccion.objects.all()
+        elif opcion == 'opcion32':
+            results = cambio_documento1.objects.all()
+        elif opcion == 'opcion33':
+            results = cambio_documento2.objects.all()
+       
+    return render(request, 'html/requisitosMoto.html', {'form': form, 'results': results})
 
 
 

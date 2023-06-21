@@ -511,3 +511,15 @@ class cambio_documento2(models.Model):
         #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
     def __str__(self):
         return f"{self.requisitos_carro.descripcion}"
+    
+#---------------   creamos la tabla requisitos Inicial moto  ---------------
+class inicial_moto(models.Model):
+    requisitos_moto = models.ForeignKey(requisitos_tramites, on_delete=models.CASCADE)
+
+    #colocamos un alias a la tabla 
+    class Meta:
+        verbose_name = 'Inicial_Moto'
+        verbose_name_plural ='Requisitos Inicial Motor'
+     #colocamos la descripcion como campo principal, este caso es cuando tenemos relación con otra tabla
+    def __str__(self):
+        return f"{self.requisitos_moto.descripcion}"

@@ -7,7 +7,7 @@ from.models import (tarifas_motos, tarifas_carro, requisitos_tramites, inicial_c
  repotenciacion_carro_particular, radicado_carro_particular,transformacion_carro_particular, inicial_prenda_carro, 
  traspaso_prenda_carro_parti, blindaje_carro_parti, modifi_alerta_propi_carro_parti, modifi_alerta_acreedor_carro_parti,
  traslado_cuenta_carro_parti, polarizado_carro_parti, cambio_conjunto_carro_parti, historial, inscripcion_RUNT, actualizacion_RUNT,
- expedicion_Licencia_Conduccion, cambio_documento1, cambio_documento2) 
+ expedicion_Licencia_Conduccion, cambio_documento1, cambio_documento2, inicial_moto) 
 
 
 
@@ -57,6 +57,7 @@ admin.site.register(actualizacion_RUNT)
 admin.site.register(expedicion_Licencia_Conduccion)
 admin.site.register(cambio_documento1)
 admin.site.register(cambio_documento2)
+admin.site.register(inicial_moto)
 
 
 

@@ -1,0 +1,41 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+
+{% block contenido %}
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-6 col-sm-12 text-white" style="background: #383e77;">
+	        
+        <!--codigo para el buscador de requisitos *7-->
+	        <form method="post">
+            <div class="row">
+
+              <div class="col-md-12">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn-outline-primary" type="submit">Buscar Requisito</button>
+              </div> 
+            </div>  
+                
+          </form>
+              
+              {% if results %}
+                <h2>Documentación Requerida</h2>
+                <ul>
+                  {% for result in results %}
+                    <li>{{ result.requisitos_carro }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+      </div>
+      <div class="col-md-6 col-sm-12 text-white" style="background: #383e77;">
+        <br><br>
+        <img src="{%static '/imagen/Fondosanta.png'%}" class="rounded" style="max-width: 100%; opacity: 1;">
+      </div>
+  </div>
+</div>    
+
+{% endblock contenido %}
