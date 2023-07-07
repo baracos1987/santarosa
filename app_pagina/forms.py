@@ -43,3 +43,33 @@ class RequisitosForm(forms.Form):
     # le colocamos estilo al campo de texto con widget=forms.Select(attrs={'class': 'form-control'})
     opcion = forms.ChoiceField(choices=OPCIONES, label='Seleccione el Trámite', widget=forms.Select(attrs={'class': 'form-control'}))
 
+
+
+class RequisitosFormMoto(forms.Form):
+    OPCIONES = (
+        ('opcion1', 'Matricula Inicial'),
+        ('opcion2', 'Matricula Inician Con Prenda'),
+        ('opcion3', 'Traspaso'),
+        ('opcion4', 'Traspaso Con Prenda'),
+        ('opcion5', 'Radicado'),
+        ('opcion6', 'Traslado De Cuenta'),
+        ('opcion7', 'Cancelacion Licencia Deterioro'),
+        ('opcion8', 'Duplicado Licencia'),
+        ('opcion9', 'Inscripcion o Levanta Prenda'),
+        ('opcion10', 'Cambio de Color'),
+        ('opcion11', 'Duplicado de Placa'),
+        ('opcion12', 'Cambio de Motor - Regrabación'),
+        ('opcion13', 'Cambio de Motor'),
+        ('opcion14', 'Rematricula'),
+        ('opcion15', 'Transformación'),
+        ('opcion16', 'Traspaso Indeterminado'),
+        ('opcion17', 'Modificación Alerta Propietario'),
+        ('opcion18', 'Modificación Alerta Acreedor'),
+        ('opcion19', 'Cancelacion Licencia'),
+        ('opcion20', 'Historial Vehiculo'),
+       
+
+    )
+    # le colocamos estilo al campo de texto con widget=forms.Select(attrs={'class': 'form-control'})
+    opcion = forms.ChoiceField(choices=OPCIONES, label='Seleccione el Trámite', widget=forms.Select(attrs={'class': 'form-control'}))
+

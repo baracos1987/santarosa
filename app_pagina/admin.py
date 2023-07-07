@@ -7,7 +7,10 @@ from.models import (tarifas_motos, tarifas_carro, requisitos_tramites, inicial_c
  repotenciacion_carro_particular, radicado_carro_particular,transformacion_carro_particular, inicial_prenda_carro, 
  traspaso_prenda_carro_parti, blindaje_carro_parti, modifi_alerta_propi_carro_parti, modifi_alerta_acreedor_carro_parti,
  traslado_cuenta_carro_parti, polarizado_carro_parti, cambio_conjunto_carro_parti, historial, inscripcion_RUNT, actualizacion_RUNT,
- expedicion_Licencia_Conduccion, cambio_documento1, cambio_documento2, inicial_moto) 
+ expedicion_Licencia_Conduccion, cambio_documento1, cambio_documento2, inicial_moto, inicial_moto_prenda, traspaso_moto,
+ traspaso_moto_prenda, radicado_moto, traslado_moto, cancelacion_licencia_moto, duplicado_licencia_moto, inscribe_lev_prenda_moto, cambio_color_moto,
+ duplicado_placa_moto,cambio_motor_regraba_moto,cambio_motor_moto,rematricula_moto,transformacion_moto,indeterminado_moto,
+ modificar_alerta_prop_moto, modificar_alerta_acree_moto, cancela_licencia_moto,historial_moto) 
 
 
 
@@ -58,6 +61,33 @@ admin.site.register(expedicion_Licencia_Conduccion)
 admin.site.register(cambio_documento1)
 admin.site.register(cambio_documento2)
 admin.site.register(inicial_moto)
+admin.site.register(inicial_moto_prenda)
+admin.site.register(traspaso_moto)
+admin.site.register(traspaso_moto_prenda) 
+admin.site.register(radicado_moto)
+admin.site.register(traslado_moto) 
+admin.site.register(cancelacion_licencia_moto) 
+admin.site.register(duplicado_licencia_moto) 
+admin.site.register(inscribe_lev_prenda_moto)
+admin.site.register(cambio_color_moto)
+admin.site.register(duplicado_placa_moto) 
+admin.site.register(cambio_motor_regraba_moto) 
+admin.site.register(cambio_motor_moto)
+admin.site.register(rematricula_moto) 
+admin.site.register(transformacion_moto) 
+admin.site.register(indeterminado_moto)
+admin.site.register(modificar_alerta_prop_moto) 
+admin.site.register(modificar_alerta_acree_moto)
+admin.site.register(cancela_licencia_moto)
+admin.site.register(historial_moto)
+
+
+
+
+
+
+
+
 
 
 
