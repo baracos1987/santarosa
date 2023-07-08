@@ -1,0 +1,60 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+
+{% block contenido %}
+  <div class="container text-center" style="background: #383e77;" >
+    
+    <div class="row justify-content-center">
+       <!--creamos ficha 1-->
+
+       <div class="col-md-3 mb-3">
+        <div class="card mx-auto"> <!--tamaño de la tarjeta-->
+            <div class="card-header bg-secondary text-center mr-2">
+                <strong class="card-title text-light">Formulario Moto y Carro</strong>
+            </div> 
+            <img class="card-img-top" src="static/imagen/fotoRNA.png" alt="Card image cap" style="width: 100%;">
+            <div class="card-body">                       
+                <!--<p class="card-text text-center">Observatorio de Movilidad.</p>-->
+                <a href="{% static 'pdf/formulario_RNA.pdf' %}" class="btn btn-primary text-white mt-2" download>Descargar PDF</a> <!--stretched-link colocamos la ficha como enlace-->
+            <hr> <!--hr para linear una ficha-->
+   
+            </div>
+        </div>
+    </div>
+
+    <!--creamos ficha 2-->
+    <div class="col-md-3 mb-3">
+        <div class="card mx-auto"> <!--tamaño de la tarjeta-->
+            <div class="card-header bg-secondary text-center mr-2">
+                <strong class="card-title text-light">Formulario Maquinaria</strong>
+            </div> 
+            <img class="card-img-top" src="static/imagen/fotoRNA.png" alt="Card image cap" style="width: 100%;">
+            <div class="card-body">                       
+                <!--<p class="card-text text-center">Educación vial</p>-->
+                <a href="{% static 'pdf/formulario_RNMA.pdf' %}" class="btn btn-primary text-white mt-2" download>Descargar PDF</a> <!--stretched-link colocamos la ficha como enlace-->
+            <hr> <!--hr para linear una ficha-->
+           
+            </div>
+        </div>
+    </div>
+
+    <!--creamos ficha 3-->
+    <div class="col-md-3 mb-3">
+        <div class="card mx-auto"> <!--tamaño de la tarjeta-->
+            <div class="card-header bg-secondary text-center mr-2">
+                <strong class="card-title text-light">Formulario Remolque</strong>
+            </div> 
+            <img class="card-img-top" src="static/imagen/fotoRNA.png" alt="Card image cap" style="width: 100%;">
+            <div class="card-body">                       
+                <!--<p class="card-text text-center">Trámites</p>-->
+                <a href="{% static 'pdf/formulario_RYS.pdf' %}" class="btn btn-primary text-white mt-2" download>Descargar PDF</a> <!--stretched-link colocamos la ficha como enlace-->
+            <hr> <!--hr para linear una ficha-->
+            
+            </div>
+        </div>
+    </div>
+  </div>
+
+  
+{% endblock contenido %}

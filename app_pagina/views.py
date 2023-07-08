@@ -46,6 +46,9 @@ def tramites(request):
 def ubicacion(request):
     return render(request, 'html/ubicacion.html')
 
+def formatoRUNT(request):
+    return render (request, 'html/formatosRUNT.html')
+
 #def requisitos(request):
 #    return render(request, 'html/requisitos.html')
 
