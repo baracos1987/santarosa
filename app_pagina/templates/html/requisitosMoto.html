@@ -26,14 +26,20 @@
               
               {% if results %}
                 <h2>Documentación Requerida</h2>
+                  <div>
+                    <a class="text-white" href="{% url 'formatoRUNT'%}">Descargar Formulario</a>
+                  </div>
+                <br>
                 <ul>
                   {% for result in results %}
                     <li>{{ result.requisitos_moto }}</li>
                   {% endfor %}
+                  
                 </ul>
               {% endif %}
+              
               <br>
-              <a href="{% static '/pdf/formulario_RNA.pdf' %}" class="btn-outline-primary text-white" download> Descargar Formulario</a>
+             
         
                 
               

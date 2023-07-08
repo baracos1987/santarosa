@@ -24,6 +24,10 @@
               
               {% if results %}
                 <h2>Documentación Requerida</h2>
+                    <div class="text-center">
+                      <a class="text-white" href="{% url 'formatoRUNT'%}">Descargar Formulario</a>
+                    </div>
+                <br>
                 <ul>
                   {% for result in results %}
                     <li>{{ result.requisitos_carro }}</li>

@@ -17,3 +17,7 @@
   .borde-izquierdo-azul2 {
     border-left: 7px solid rgb(155, 192, 241);
   }
+
+  .borde-izquierdo-rosado {
+    border-left: 7px solid rgb(231, 3, 110);
+  }
